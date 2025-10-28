@@ -1,4 +1,5 @@
 # my-first-project
 
 Simple Programming Languages Guide for beginers 
-![ration card template](https://github.com/user-attachments/assets/8bb2dcb5-9921-4773-ac15-b693dd8ad047)
+
+![sample](https://github.com/user-attachments/assets/e3a2b525-70ad-4566-9f3a-358f34f77e48)
