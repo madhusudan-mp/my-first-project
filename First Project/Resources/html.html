@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics - Comprehensive Guide</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+        type="image/x-icon">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000000;
+        }
+
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(3px);
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            color: #E44D26;
+            margin-top: 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #F16529;
+            border-bottom: 2px solid #F16529;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        .html-logo {
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .html-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .analogy {
+            font-size: 1.3em;
+            text-align: center;
+            font-style: italic;
+            color: #E44D26;
+            margin: 30px 0;
+            padding: 15px;
+            background-color: rgba(228, 77, 38, 0.1);
+            border-radius: 8px;
+        }
+
+        .powered-by {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+            color: #666;
+        }
+
+        .feature-list {
+            background-color: rgba(241, 101, 41, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .code-example {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 25px 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #F16529;
+        }
+
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 11px;
+            bottom: -15px;
+            width: 2px;
+            background-color: #F16529;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: #E44D26;
+        }
+
+        .element-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .element-table th,
+        .element-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .element-table th {
+            background-color: #F16529;
+            color: white;
+        }
+
+        .element-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .element-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .footer {
+            display: block;
+            text-align: center;
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+        }
+
+        .about {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-box">
+        <h1>HTML</h1>
+        <img class="html-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+            alt="HTML5 Logo">
+
+        <p class="description">
+            HTML (HyperText Markup Language) is the foundational language of the web.
+            It provides the structure and content of every webpage, using tags to define elements
+            like headings, paragraphs, images, and links. While not a programming language,
+            HTML works with CSS for styling and JavaScript for interactivity to create modern websites.
+        </p>
+
+        <p class="analogy">
+            Think of HTML as the skeleton of a webpage - it defines the structure,
+            while CSS adds the skin and JavaScript provides the muscles.
+        </p>
+
+        <h2>History of HTML</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="timeline-year">1989</span>
+                <p>Tim Berners-Lee invents HTML while working at CERN as a way to share scientific documents.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1991</span>
+                <p>First public description of HTML tags is published.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1995</span>
+                <p>HTML 2.0 is published as the first standard HTML specification.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1997</span>
+                <p>HTML 3.2 is released, adding tables, applets, and text flow around images.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">1999</span>
+                <p>HTML 4.01 becomes a W3C Recommendation, introducing stylesheets and scripting.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2000</span>
+                <p>XHTML 1.0 is introduced as a reformulation of HTML 4 in XML.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2008</span>
+                <p>HTML5 draft is first published by WHATWG.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2014</span>
+                <p>HTML5 is completed and standardized, bringing new semantic elements and APIs.</p>
+            </div>
+        </div>
+
+        <h2>Key Features of HTML</h2>
+        <div class="feature-list">
+            <ul>
+                <li><strong>Markup Language:</strong> Uses tags to define elements and their purpose</li>
+                <li><strong>Platform Independent:</strong> Works across all operating systems and devices</li>
+                <li><strong>Hypertext:</strong> Allows linking between documents via hyperlinks</li>
+                <li><strong>Semantic Structure:</strong> Provides meaning to content through semantic elements</li>
+                <li><strong>Media Support:</strong> Can embed images, video, audio, and other multimedia</li>
+                <li><strong>Forms:</strong> Enables user input and data collection</li>
+                <li><strong>Accessibility:</strong> Supports features to make content accessible to all users</li>
+                <li><strong>Extensible:</strong> Can be combined with CSS and JavaScript for enhanced functionality</li>
+            </ul>
+        </div>
+
+        <h2>Basic HTML Document Structure</h2>
+        <div class="code-example">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br>
+            &lt;/head&gt;<br>
+            &lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;My First Heading&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;My first paragraph.&lt;/p&gt;<br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+
+        <h2>Common HTML Elements</h2>
+        <table class="element-table">
+            <tr>
+                <th>Element</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>&lt;h1&gt; to &lt;h6&gt;</td>
+                <td>Heading elements (h1 is highest level)</td>
+                <td>&lt;h1&gt;Main Title&lt;/h1&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;p&gt;</td>
+                <td>Paragraph</td>
+                <td>&lt;p&gt;This is a paragraph.&lt;/p&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;a&gt;</td>
+                <td>Anchor (hyperlink)</td>
+                <td>&lt;a href="https://example.com"&gt;Link&lt;/a&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;img&gt;</td>
+                <td>Image</td>
+                <td>&lt;img src="image.jpg" alt="Description"&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;div&gt;</td>
+                <td>Division or section</td>
+                <td>&lt;div&gt;Content group&lt;/div&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;span&gt;</td>
+                <td>Inline container</td>
+                <td>&lt;span&gt;Styled text&lt;/span&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</td>
+                <td>Unordered list, ordered list, list item</td>
+                <td>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</td>
+                <td>Table, table row, table data</td>
+                <td>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Data&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;form&gt;, &lt;input&gt;</td>
+                <td>Form and input elements</td>
+                <td>&lt;form&gt;&lt;input type="text"&gt;&lt;/form&gt;</td>
+            </tr>
+        </table>
+
+        <h2>HTML5 Semantic Elements</h2>
+        <div class="feature-list">
+            <p>HTML5 introduced new semantic elements that better describe their meaning:</p>
+            <ul>
+                <li><strong>&lt;header&gt;</strong> - Container for introductory content</li>
+                <li><strong>&lt;nav&gt;</strong> - Navigation links</li>
+                <li><strong>&lt;main&gt;</strong> - Main content of the document</li>
+                <li><strong>&lt;article&gt;</strong> - Independent, self-contained content</li>
+                <li><strong>&lt;section&gt;</strong> - Thematic grouping of content</li>
+                <li><strong>&lt;aside&gt;</strong> - Content aside from the main content</li>
+                <li><strong>&lt;footer&gt;</strong> - Footer for a document or section</li>
+                <li><strong>&lt;figure&gt; and &lt;figcaption&gt;</strong> - Figures with captions</li>
+                <li><strong>&lt;time&gt;</strong> - Machine-readable date/time</li>
+                <li><strong>&lt;mark&gt;</strong> - Highlighted text</li>
+            </ul>
+        </div>
+
+        <h2>Why Learn HTML?</h2>
+        <div class="feature-list">
+            <ul>
+                <li><strong>Essential Web Skill:</strong> Fundamental for any web development</li>
+                <li><strong>Easy to Learn:</strong> Simple syntax with immediate visual results</li>
+                <li><strong>Career Opportunities:</strong> Basis for front-end and full-stack development</li>
+                <li><strong>Content Management:</strong> Helps in working with CMS like WordPress</li>
+                <li><strong>Email Development:</strong> Needed for creating HTML emails</li>
+                <li><strong>Digital Marketing:</strong> Useful for SEO and content creation</li>
+                <li><strong>Creative Expression:</strong> Platform to share ideas online</li>
+            </ul>
+        </div>
+
+        <p class="powered-by">The building block of every website you visit</p>
+
+        <div class="footer">
+            <p><strong>For more Details</strong></p>
+            <a href="about.html" class="about">contact us</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

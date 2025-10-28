@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #000000;
+        }
+
+        .content-box {
+            background-color: rgba(242, 242, 242, 0.8);
+            backdrop-filter: blur(5px);              
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            color: #3776ab;
+            margin-top: 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #3776ab;
+            border-bottom: 2px solid #ffd43b;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        .python-logo {
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s;
+        }
+
+        .python-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .features-title {
+            font-size: 1.8em;
+            color: #ffd43b;
+            margin: 25px 0 15px;
+            text-align: center;
+            border-bottom: 2px solid #ffd43b;
+            padding-bottom: 10px;
+        }
+
+        .features-list, .applications-list, .usage-list {
+            font-size: 1.1em;
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        .feature-item, .application-item, .usage-item {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .feature-item:before {
+            content: "🐍";
+            position: absolute;
+            left: 0;
+        }
+
+        .application-item:before {
+            content: "🚀";
+            position: absolute;
+            left: 0;
+        }
+
+        .usage-item:before {
+            content: "💻";
+            position: absolute;
+            left: 0;
+        }
+
+        .code-example {
+            background-color: #2b2b2b;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        .code-comment {
+            color: #6a9955;
+        }
+
+        .code-keyword {
+            color: #569cd6;
+        }
+
+        .code-string {
+            color: #ce9178;
+        }
+
+        .code-function {
+            color: #dcdcaa;
+        }
+
+        .tab {
+            padding-left: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            display: block;
+            text-align: center;
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+        }
+
+        .about {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <h1>Python</h1>
+        <img class="python-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Python Logo">
+        
+        <p class="description">
+            Python is a high-level, interpreted programming language prized for its readability. 
+            It supports multiple paradigms including procedural, object-oriented, and functional programming. 
+            With its extensive standard library and vibrant community, Python powers everything from 
+            web development to data science and artificial intelligence.
+        </p>
+        
+        <div class="section">
+            <h2 class="features-title">Key Features</h2>
+            <ul class="features-list">
+                <li class="feature-item">Simple, readable syntax that's easy to learn</li>
+                <li class="feature-item">Extensive standard library and third-party packages</li>
+                <li class="feature-item">Cross-platform compatibility</li>
+                <li class="feature-item">Strong community support</li>
+                <li class="feature-item">Dynamic typing and automatic memory management</li>
+                <li class="feature-item">Widely used in data science, AI, web development, and automation</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Where Python is Used</h2>
+            <ul class="usage-list">
+                <li class="usage-item"><strong>Web Development:</strong> Django, Flask, Pyramid frameworks</li>
+                <li class="usage-item"><strong>Data Science & Analytics:</strong> Pandas, NumPy, SciPy</li>
+                <li class="usage-item"><strong>Machine Learning & AI:</strong> TensorFlow, PyTorch, scikit-learn</li>
+                <li class="usage-item"><strong>Scientific Computing:</strong> Used in physics, biology, astronomy</li>
+                <li class="usage-item"><strong>Automation & Scripting:</strong> System administration, testing</li>
+                <li class="usage-item"><strong>Game Development:</strong> Pygame, Panda3D</li>
+                <li class="usage-item"><strong>Desktop Applications:</strong> Tkinter, PyQt, Kivy</li>
+                <li class="usage-item"><strong>Networking:</strong> Socket programming, network automation</li>
+                <li class="usage-item"><strong>Embedded Systems:</strong> MicroPython, CircuitPython</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Python Code Examples</h2>
+            
+            <h3>Hello World</h3>
+            <div class="code-example">
+                <span class="code-keyword">print</span>(<span class="code-string">"Hello, World!"</span>)
+            </div>
+            
+            <h3>Basic Function</h3>
+            <div class="code-example">
+                <span class="code-keyword">def</span> <span class="code-function">greet</span>(name):
+                <br><span class="tab"></span><span class="code-keyword">return</span> <span class="code-string">f"Hello, {name}!"</span>
+                <br>
+                <br><span class="code-comment"># Call the function</span>
+                <br>message = greet(<span class="code-string">"Alice"</span>)
+                <br><span class="code-keyword">print</span>(message)
+            </div>
+            
+            <h3>List Comprehension</h3>
+            <div class="code-example">
+                <span class="code-comment"># Square numbers from 0 to 9</span>
+                <br>squares = [x**2 <span class="code-keyword">for</span> x <span class="code-keyword">in</span> range(10)]
+                <br><span class="code-keyword">print</span>(squares)
+            </div>
+            
+            <h3>Simple Web Server (Flask)</h3>
+            <div class="code-example">
+                <span class="code-keyword">from</span> flask <span class="code-keyword">import</span> Flask
+                <br>
+                <br>app = Flask(__name__)
+                <br>
+                <br>@app.route(<span class="code-string">'/'</span>)
+                <br><span class="code-keyword">def</span> <span class="code-function">home</span>():
+                <br><span class="tab"></span><span class="code-keyword">return</span> <span class="code-string">"Welcome to my Python web app!"</span>
+                <br>
+                <br><span class="code-keyword">if</span> __name__ == <span class="code-string">'__main__'</span>:
+                <br><span class="tab"></span>app.run(debug=<span class="code-keyword">True</span>)
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Popular Python Applications</h2>
+            <ul class="applications-list">
+                <li class="application-item"><strong>Instagram:</strong> The entire backend is built with Django (Python web framework)</li>
+                <li class="application-item"><strong>Spotify:</strong> Uses Python for data analysis and backend services</li>
+                <li class="application-item"><strong>Netflix:</strong> Uses Python for data analysis and recommendation algorithms</li>
+                <li class="application-item"><strong>Google:</strong> Many internal tools and services are written in Python</li>
+                <li class="application-item"><strong>NASA:</strong> Uses Python for scientific computing and data analysis</li>
+                <li class="application-item"><strong>Dropbox:</strong> Both server and desktop client use Python extensively</li>
+                <li class="application-item"><strong>Pinterest:</strong> Uses Django for web framework</li>
+                <li class="application-item"><strong>Reddit:</strong> Originally written in Python (though parts have been rewritten)</li>
+                <li class="application-item"><strong>YouTube:</strong> Many components are written in Python</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Why Learn Python?</h2>
+            <p>Python continues to be one of the most popular programming languages for several reasons:</p>
+            <ul class="features-list">
+                <li class="feature-item">High demand in the job market across multiple industries</li>
+                <li class="feature-item">Gentle learning curve makes it ideal for beginners</li>
+                <li class="feature-item">Versatile - can be used for almost any programming task</li>
+                <li class="feature-item">Strong community support with abundant learning resources</li>
+                <li class="feature-item">Excellent for prototyping and rapid application development</li>
+                <li class="feature-item">Dominant language in emerging fields like AI and data science</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p><strong>For more Details</strong></p>
+            <a href="about.html" class="about">contact us</a>
+        </div>
+
+    </div>
+</body>
+</html>

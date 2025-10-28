@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000000;
+            padding: 20px;
+        }
+
+        .content-box {
+            background-color: rgba(242, 242, 242, 0.8);
+            backdrop-filter: blur(3px);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            color: #f0db4f;
+            margin-top: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #323330;
+            border-bottom: 2px solid #f0db4f;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        .js-logo {
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .js-logo:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 25px 0;
+        }
+
+        .features-title {
+            font-size: 1.8em;
+            color: #323330;
+            text-align: center;
+            margin: 30px 0 20px;
+            border-bottom: 2px solid #323330;
+            padding-bottom: 10px;
+        }
+
+        .features-list, .frameworks-list, .usage-list, .applications-list {
+            font-size: 1.1em;
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        .feature-item, .framework-item, .usage-item, .application-item {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .feature-item:before {
+            content: "⚡";
+            position: absolute;
+            left: 0;
+        }
+
+        .framework-item:before {
+            content: "🛠️";
+            position: absolute;
+            left: 0;
+        }
+
+        .usage-item:before {
+            content: "🌐";
+            position: absolute;
+            left: 0;
+        }
+
+        .application-item:before {
+            content: "🚀";
+            position: absolute;
+            left: 0;
+        }
+
+        .code-example {
+            background-color: #2b2b2b;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        .code-comment {
+            color: #6a9955;
+        }
+
+        .code-keyword {
+            color: #569cd6;
+        }
+
+        .code-string {
+            color: #ce9178;
+        }
+
+        .code-function {
+            color: #dcdcaa;
+        }
+
+        .code-number {
+            color: #b5cea8;
+        }
+
+        .tab {
+            padding-left: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #f0db4f;
+            color: #323330;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .footer {
+            display: block;
+            text-align: center;
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+        }
+
+        .about {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <h1>JavaScript</h1>
+        <img class="js-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo">
+        
+        <p class="description">
+            JavaScript is the programming language of the web, enabling dynamic and interactive experiences. 
+            Originally created for front-end development, it now powers full-stack applications through Node.js. 
+            As the only language natively supported by browsers, it's essential for modern web development.
+        </p>
+        
+        <div class="section">
+            <h2 class="features-title">Key Features</h2>
+            <ul class="features-list">
+                <li class="feature-item">The language of the web - runs in all browsers</li>
+                <li class="feature-item">Versatile for both front-end and back-end (with Node.js)</li>
+                <li class="feature-item">Dynamic typing and prototype-based object orientation</li>
+                <li class="feature-item">First-class functions and closures</li>
+                <li class="feature-item">Asynchronous programming with promises and async/await</li>
+                <li class="feature-item">Vast ecosystem with npm (largest package registry)</li>
+                <li class="feature-item">Most used programming language (Stack Overflow surveys)</li>
+                <li class="feature-item">Just-in-time compiled for high performance</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Where JavaScript is Used</h2>
+            <ul class="usage-list">
+                <li class="usage-item"><strong>Web Development:</strong> Interactive websites, SPAs (Single Page Applications)</li>
+                <li class="usage-item"><strong>Server-side Development:</strong> Node.js for backend services</li>
+                <li class="usage-item"><strong>Mobile Apps:</strong> React Native, Ionic, NativeScript</li>
+                <li class="usage-item"><strong>Desktop Apps:</strong> Electron, NW.js</li>
+                <li class="usage-item"><strong>Game Development:</strong> Browser games, Phaser, Three.js</li>
+                <li class="usage-item"><strong>IoT:</strong> Programming devices with JavaScript</li>
+                <li class="usage-item"><strong>Machine Learning:</strong> TensorFlow.js, Brain.js</li>
+                <li class="usage-item"><strong>Automation:</strong> Scripting and task automation</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Popular JavaScript Frameworks & Libraries</h2>
+            <ul class="frameworks-list">
+                <li class="framework-item"><strong>Frontend Frameworks:</strong> React, Angular, Vue.js, Svelte</li>
+                <li class="framework-item"><strong>Backend Frameworks:</strong> Express.js, NestJS, Koa, Fastify</li>
+                <li class="framework-item"><strong>Mobile Development:</strong> React Native, Ionic, NativeScript</li>
+                <li class="framework-item"><strong>Testing:</strong> Jest, Mocha, Jasmine, Cypress</li>
+                <li class="framework-item"><strong>Data Visualization:</strong> D3.js, Chart.js, Three.js</li>
+                <li class="framework-item"><strong>Build Tools:</strong> Webpack, Rollup, Parcel, Vite</li>
+                <li class="framework-item"><strong>State Management:</strong> Redux, MobX, Zustand</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>JavaScript Code Examples</h2>
+            
+            <h3>Hello World</h3>
+            <div class="code-example">
+                <span class="code-keyword">console</span>.<span class="code-function">log</span>(<span class="code-string">'Hello, World!'</span>);
+            </div>
+            
+            <h3>DOM Manipulation</h3>
+            <div class="code-example">
+                <span class="code-comment">// Change text of an element with id="demo"</span>
+                <br><span class="code-keyword">document</span>.<span class="code-function">getElementById</span>(<span class="code-string">'demo'</span>).textContent = <span class="code-string">'JavaScript is awesome!'</span>;
+            </div>
+            
+            <h3>Fetch API Example</h3>
+            <div class="code-example">
+                <span class="code-keyword">async</span> <span class="code-keyword">function</span> <span class="code-function">fetchData</span>() {
+                <br><span class="tab"></span><span class="code-keyword">try</span> {
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">const</span> response = <span class="code-keyword">await</span> <span class="code-function">fetch</span>(<span class="code-string">'https://api.example.com/data'</span>);
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">const</span> data = <span class="code-keyword">await</span> response.<span class="code-function">json</span>();
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">console</span>.<span class="code-function">log</span>(data);
+                <br><span class="tab"></span>} <span class="code-keyword">catch</span> (error) {
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">console</span>.<span class="code-function">error</span>(<span class="code-string">'Error:'</span>, error);
+                <br><span class="tab"></span>}
+                <br>}
+                <br>
+                <br><span class="code-function">fetchData</span>();
+            </div>
+            
+            <h3>Simple Express Server</h3>
+            <div class="code-example">
+                <span class="code-keyword">const</span> express = <span class="code-function">require</span>(<span class="code-string">'express'</span>);
+                <br><span class="code-keyword">const</span> app = <span class="code-function">express</span>();
+                <br>
+                <br>app.<span class="code-function">get</span>(<span class="code-string">'/'</span>, (req, res) => {
+                <br><span class="tab"></span>res.<span class="code-function">send</span>(<span class="code-string">'Hello from Node.js server!'</span>);
+                <br>});
+                <br>
+                <br>app.<span class="code-function">listen</span>(<span class="code-number">3000</span>, () => {
+                <br><span class="tab"></span><span class="code-keyword">console</span>.<span class="code-function">log</span>(<span class="code-string">'Server running on port 3000'</span>);
+                <br>});
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>JavaScript vs Other Languages</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>JavaScript</th>
+                    <th>Python</th>
+                    <th>Java</th>
+                </tr>
+                <tr>
+                    <td>Typing</td>
+                    <td>Dynamic</td>
+                    <td>Dynamic</td>
+                    <td>Static</td>
+                </tr>
+                <tr>
+                    <td>Execution</td>
+                    <td>Interpreted (JIT compiled)</td>
+                    <td>Interpreted</td>
+                    <td>Compiled to bytecode</td>
+                </tr>
+                <tr>
+                    <td>Primary Use</td>
+                    <td>Web development</td>
+                    <td>General purpose</td>
+                    <td>Enterprise applications</td>
+                </tr>
+                <tr>
+                    <td>Concurrency Model</td>
+                    <td>Event loop</td>
+                    <td>Multi-threading</td>
+                    <td>Multi-threading</td>
+                </tr>
+                <tr>
+                    <td>Learning Curve</td>
+                    <td>Moderate</td>
+                    <td>Easy</td>
+                    <td>Steep</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Famous Applications Built with JavaScript</h2>
+            <ul class="applications-list">
+                <li class="application-item"><strong>Google Maps:</strong> Interactive maps with JavaScript</li>
+                <li class="application-item"><strong>Netflix:</strong> Uses React for its frontend</li>
+                <li class="application-item"><strong>LinkedIn:</strong> Mobile app built with React Native</li>
+                <li class="application-item"><strong>PayPal:</strong> Uses Node.js for backend services</li>
+                <li class="application-item"><strong>Uber:</strong> Uses Node.js for handling massive data</li>
+                <li class="application-item"><strong>Facebook:</strong> Uses React for its frontend</li>
+                <li class="application-item"><strong>Airbnb:</strong> Uses React for its frontend</li>
+                <li class="application-item"><strong>Trello:</strong> Real-time updates with JavaScript</li>
+                <li class="application-item"><strong>Slack:</strong> Desktop app built with Electron</li>
+                <li class="application-item"><strong>Discord:</strong> Desktop app built with Electron</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>JavaScript Evolution</h2>
+            <p>JavaScript has evolved significantly since its creation in 1995:</p>
+            <ul class="features-list">
+                <li class="feature-item"><strong>1995:</strong> Created by Brendan Eich in 10 days (originally called Mocha)</li>
+                <li class="feature-item"><strong>1997:</strong> ECMAScript 1 standardized</li>
+                <li class="feature-item"><strong>2009:</strong> ES5 released with JSON support</li>
+                <li class="feature-item"><strong>2015:</strong> ES6/ES2015 - major update with classes, modules, arrow functions</li>
+                <li class="feature-item"><strong>2016+:</strong> Annual releases (ES2016, ES2017, etc.)</li>
+                <li class="feature-item"><strong>2020:</strong> ES2020 with optional chaining, nullish coalescing</li>
+                <li class="feature-item"><strong>2022:</strong> ES2022 with top-level await, class fields</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p><strong>For more Details</strong></p>
+            <a href="about.html" class="about">contact us</a>
+        </div>
+        
+    </div>
+</body>
+</html>

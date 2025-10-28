@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000000;
+            padding: 20px;
+        }
+
+        .content-box {
+            background-color: rgba(242,242,242,0.8);
+            backdrop-filter: blur(3px);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            color: #5382a1;
+            margin-top: 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #5382a1;
+            border-bottom: 2px solid #e76f00;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        .java-logo {
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .java-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 25px 0;
+        }
+
+        .features-title {
+            font-size: 1.8em;
+            color: #e76f00;
+            text-align: center;
+            margin: 30px 0 20px;
+            border-bottom: 2px solid #e76f00;
+            padding-bottom: 10px;
+        }
+
+        .features-list, .frameworks-list, .usage-list, .applications-list {
+            font-size: 1.1em;
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        .feature-item, .framework-item, .usage-item, .application-item {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .feature-item:before {
+            content: "☕";
+            position: absolute;
+            left: 0;
+        }
+
+        .framework-item:before {
+            content: "🛠️";
+            position: absolute;
+            left: 0;
+        }
+
+        .usage-item:before {
+            content: "💼";
+            position: absolute;
+            left: 0;
+        }
+
+        .application-item:before {
+            content: "🚀";
+            position: absolute;
+            left: 0;
+        }
+
+        .code-example {
+            background-color: #2b2b2b;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        .code-comment {
+            color: #6a9955;
+        }
+
+        .code-keyword {
+            color: #569cd6;
+        }
+
+        .code-string {
+            color: #ce9178;
+        }
+
+        .code-function {
+            color: #dcdcaa;
+        }
+
+        .code-number {
+            color: #b5cea8;
+        }
+
+        .code-class {
+            color: #4ec9b0;
+        }
+
+        .tab {
+            padding-left: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #5382a1;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .jvm-architecture {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .footer {
+            display: block;
+            text-align: center;
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+        }
+
+        .about {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <h1>Java</h1>
+        <img class="java-logo" src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo">
+        
+        <p class="description">
+            Java is a robust, object-oriented programming language famous for its "Write Once, Run Anywhere" capability. 
+            Powered by the Java Virtual Machine (JVM), it runs on billions of devices worldwide. 
+            Java dominates enterprise environments, Android development, and large-scale systems with its stability and portability.
+        </p>
+        
+        <div class="section">
+            <h2 class="features-title">Key Features</h2>
+            <ul class="features-list">
+                <li class="feature-item"><strong>Platform Independence:</strong> Write Once, Run Anywhere (WORA) with JVM</li>
+                <li class="feature-item"><strong>Object-Oriented:</strong> Strong OOP principles (encapsulation, inheritance, polymorphism)</li>
+                <li class="feature-item"><strong>Memory Management:</strong> Automatic garbage collection</li>
+                <li class="feature-item"><strong>Security:</strong> Bytecode verification, security manager, sandboxing</li>
+                <li class="feature-item"><strong>Multithreading:</strong> Built-in support for concurrent programming</li>
+                <li class="feature-item"><strong>Rich Ecosystem:</strong> Extensive standard library and frameworks</li>
+                <li class="feature-item"><strong>Performance:</strong> JIT compilation for optimized execution</li>
+                <li class="feature-item"><strong>Backward Compatibility:</strong> Strong commitment to version compatibility</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Where Java is Used</h2>
+            <ul class="usage-list">
+                <li class="usage-item"><strong>Enterprise Applications:</strong> Banking, financial services, ERP systems</li>
+                <li class="usage-item"><strong>Android Development:</strong> Primary language for Android apps</li>
+                <li class="usage-item"><strong>Web Applications:</strong> Server-side technologies like Spring, Jakarta EE</li>
+                <li class="usage-item"><strong>Big Data:</strong> Hadoop, Spark, and other data processing tools</li>
+                <li class="usage-item"><strong>Scientific Computing:</strong> Numerical computations and research</li>
+                <li class="usage-item"><strong>Embedded Systems:</strong> IoT devices, smart cards</li>
+                <li class="usage-item"><strong>Game Development:</strong> Minecraft, LibGDX framework</li>
+                <li class="usage-item"><strong>Cloud Computing:</strong> Microservices, serverless applications</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Java Virtual Machine (JVM) Architecture</h2>
+            <img src="https://www.javatpoint.com/images/jvmarchitecture.jpg" alt="JVM Architecture" class="jvm-architecture">
+            <p>The JVM is the cornerstone of Java's platform independence, providing:</p>
+            <ul class="features-list">
+                <li class="feature-item">Class loader subsystem</li>
+                <li class="feature-item">Runtime data areas (method area, heap, stack, etc.)</li>
+                <li class="feature-item">Execution engine (interpreter, JIT compiler)</li>
+                <li class="feature-item">Native method interface</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Popular Java Frameworks & Tools</h2>
+            <ul class="frameworks-list">
+                <li class="framework-item"><strong>Web Frameworks:</strong> Spring Boot, Jakarta EE, Play, Vaadin</li>
+                <li class="framework-item"><strong>Microservices:</strong> Spring Cloud, Micronaut, Quarkus</li>
+                <li class="framework-item"><strong>Persistence:</strong> Hibernate, JPA, MyBatis</li>
+                <li class="framework-item"><strong>Testing:</strong> JUnit, Mockito, TestNG</li>
+                <li class="framework-item"><strong>Build Tools:</strong> Maven, Gradle, Ant</li>
+                <li class="framework-item"><strong>Big Data:</strong> Hadoop, Spark, Flink</li>
+                <li class="framework-item"><strong>IDEs:</strong> IntelliJ IDEA, Eclipse, NetBeans</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Java Code Examples</h2>
+            
+            <h3>Hello World</h3>
+            <div class="code-example">
+                <span class="code-keyword">public class</span> <span class="code-class">HelloWorld</span> {
+                <br><span class="tab"><span class="code-keyword">public static void</span> <span class="code-function">main</span>(String[] args) {
+                <br><span class="tab"></span><span class="tab"><span class="code-keyword">System</span>.<span class="code-keyword">out</span>.<span class="code-function">println</span>(<span class="code-string">"Hello, World!"</span>);
+                <br><span class="tab"></span>}
+                <br>}
+            </div>
+            
+            <h3>Object-Oriented Example</h3>
+            <div class="code-example">
+                <span class="code-keyword">public class</span> <span class="code-class">Car</span> {
+                <br><span class="tab"></span><span class="code-comment">// Fields</span>
+                <br><span class="tab"></span><span class="code-keyword">private</span> String make;
+                <br><span class="tab"></span><span class="code-keyword">private</span> String model;
+                <br>
+                <br><span class="tab"></span><span class="code-comment">// Constructor</span>
+                <br><span class="tab"></span><span class="code-keyword">public</span> <span class="code-function">Car</span>(String make, String model) {
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">this</span>.make = make;
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">this</span>.model = model;
+                <br><span class="tab"></span>}
+                <br>
+                <br><span class="tab"></span><span class="code-comment">// Method</span>
+                <br><span class="tab"></span><span class="code-keyword">public void</span> <span class="code-function">displayInfo</span>() {
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">System</span>.<span class="code-keyword">out</span>.<span class="code-function">println</span>(<span class="code-string">"Make: "</span> + make + <span class="code-string">", Model: "</span> + model);
+                <br><span class="tab"></span>}
+                <br>}
+            </div>
+            
+            <h3>Collections Example</h3>
+            <div class="code-example">
+                <span class="code-keyword">import</span> java.util.<span class="code-keyword">*</span>;
+                <br>
+                <br><span class="code-keyword">public class</span> <span class="code-class">CollectionsDemo</span> {
+                <br><span class="tab"></span><span class="code-keyword">public static void</span> <span class="code-function">main</span>(String[] args) {
+                <br><span class="tab"></span><span class="tab"></span>List&lt;String&gt; languages = <span class="code-keyword">new</span> ArrayList&lt;&gt;();
+                <br><span class="tab"></span><span class="tab"></span>languages.<span class="code-function">add</span>(<span class="code-string">"Java"</span>);
+                <br><span class="tab"></span><span class="tab"></span>languages.<span class="code-function">add</span>(<span class="code-string">"Python"</span>);
+                <br><span class="tab"></span><span class="tab"></span>languages.<span class="code-function">add</span>(<span class="code-string">"JavaScript"</span>);
+                <br>
+                <br><span class="tab"></span><span class="tab"></span><span class="code-comment">// Using forEach with lambda expression</span>
+                <br><span class="tab"></span><span class="tab"></span>languages.<span class="code-function">forEach</span>(lang -> <span class="code-keyword">System</span>.<span class="code-keyword">out</span>.<span class="code-function">println</span>(lang));
+                <br><span class="tab"></span>}
+                <br>}
+            </div>
+            
+            <h3>Spring Boot REST Controller</h3>
+            <div class="code-example">
+                <span class="code-keyword">import</span> org.springframework.web.bind.annotation.<span class="code-keyword">*</span>;
+                <br><span class="code-keyword">import</span> org.springframework.http.<span class="code-keyword">*</span>;
+                <br>
+                <br>@RestController
+                <br>@RequestMapping(<span class="code-string">"/api"</span>)
+                <br><span class="code-keyword">public class</span> <span class="code-class">GreetingController</span> {
+                <br>
+                <br><span class="tab"></span>@GetMapping(<span class="code-string">"/greet"</span>)
+                <br><span class="tab"></span><span class="code-keyword">public</span> ResponseEntity&lt;String&gt; <span class="code-function">greet</span>(@RequestParam String name) {
+                <br><span class="tab"></span><span class="tab"></span>String message = <span class="code-string">"Hello, "</span> + name + <span class="code-string">"!"</span>;
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">return</span> ResponseEntity.<span class="code-function">ok</span>(message);
+                <br><span class="tab"></span>}
+                <br>}
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Java vs Other Languages</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>Java</th>
+                    <th>Python</th>
+                    <th>JavaScript</th>
+                </tr>
+                <tr>
+                    <td>Typing</td>
+                    <td>Static</td>
+                    <td>Dynamic</td>
+                    <td>Dynamic</td>
+                </tr>
+                <tr>
+                    <td>Execution</td>
+                    <td>Compiled to bytecode</td>
+                    <td>Interpreted</td>
+                    <td>Interpreted (JIT compiled)</td>
+                </tr>
+                <tr>
+                    <td>Primary Use</td>
+                    <td>Enterprise, Android</td>
+                    <td>General purpose</td>
+                    <td>Web development</td>
+                </tr>
+                <tr>
+                    <td>Performance</td>
+                    <td>High</td>
+                    <td>Moderate</td>
+                    <td>Good (with JIT)</td>
+                </tr>
+                <tr>
+                    <td>Learning Curve</td>
+                    <td>Steep</td>
+                    <td>Easy</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <td>Memory Management</td>
+                    <td>Garbage Collection</td>
+                    <td>Garbage Collection</td>
+                    <td>Garbage Collection</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Famous Applications Built with Java</h2>
+            <ul class="applications-list">
+                <li class="application-item"><strong>Android OS:</strong> Primary language for Android app development</li>
+                <li class="application-item"><strong>Minecraft:</strong> The popular game was originally written in Java</li>
+                <li class="application-item"><strong>LinkedIn:</strong> Backend services built with Java</li>
+                <li class="application-item"><strong>Netflix:</strong> Uses Java for backend services</li>
+                <li class="application-item"><strong>Uber:</strong> Uses Java for backend services</li>
+                <li class="application-item"><strong>Twitter:</strong> Originally built with Ruby, now uses Java for scalability</li>
+                <li class="application-item"><strong>Spotify:</strong> Uses Java for backend services</li>
+                <li class="application-item"><strong>Amazon:</strong> Many backend services use Java</li>
+                <li class="application-item"><strong>NASA World Wind:</strong> Geospatial information system</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Java Evolution</h2>
+            <p>Java has evolved significantly since its creation in 1995:</p>
+            <ul class="features-list">
+                <li class="feature-item"><strong>1995:</strong> Java 1.0 released by Sun Microsystems</li>
+                <li class="feature-item"><strong>1998:</strong> Java 1.2 (Java 2) with Collections framework</li>
+                <li class="feature-item"><strong>2004:</strong> Java 5 with generics, autoboxing, annotations</li>
+                <li class="feature-item"><strong>2014:</strong> Java 8 with lambdas, streams, new date/time API</li>
+                <li class="feature-item"><strong>2017:</strong> Java 9 with module system (JPMS)</li>
+                <li class="feature-item"><strong>2018:</strong> Switch to 6-month release cycle</li>
+                <li class="feature-item"><strong>2020:</strong> Java 14 with records, pattern matching</li>
+                <li class="feature-item"><strong>2023:</strong> Java 21 with virtual threads, pattern matching</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p><strong>For more Details</strong></p>
+            <a href="about.html" class="about">contact us</a>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# Programming</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png"
+        type="image/x-icon">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000000;
+            padding: 20px;
+        }
+
+        .content-box {
+            background-color: rgba(242, 242, 242, 0.8);
+            backdrop-filter: blur(3px);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            color: #68217A;
+            margin-top: 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #68217A;
+            border-bottom: 2px solid #68217A;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        .cs-logo {
+            width: 180px;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .cs-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 25px 0;
+        }
+
+        .features-title {
+            font-size: 1.8em;
+            color: #68217A;
+            text-align: center;
+            margin: 30px 0 20px;
+            border-bottom: 2px solid #68217A;
+            padding-bottom: 10px;
+        }
+
+        .features-list,
+        .frameworks-list,
+        .usage-list,
+        .applications-list,
+        .versions-list {
+            font-size: 1.1em;
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        .feature-item,
+        .framework-item,
+        .usage-item,
+        .application-item,
+        .version-item {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .feature-item:before {
+            content: "🟣";
+            position: absolute;
+            left: 0;
+        }
+
+        .framework-item:before {
+            content: "🧩";
+            position: absolute;
+            left: 0;
+        }
+
+        .usage-item:before {
+            content: "🚀";
+            position: absolute;
+            left: 0;
+        }
+
+        .application-item:before {
+            content: "💻";
+            position: absolute;
+            left: 0;
+        }
+
+        .version-item:before {
+            content: "🔄";
+            position: absolute;
+            left: 0;
+        }
+
+        .code-example {
+            background-color: #2b2b2b;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        .code-comment {
+            color: #6a9955;
+        }
+
+        .code-keyword {
+            color: #569cd6;
+        }
+
+        .code-string {
+            color: #ce9178;
+        }
+
+        .code-function {
+            color: #dcdcaa;
+        }
+
+        .code-number {
+            color: #b5cea8;
+        }
+
+        .code-class {
+            color: #4ec9b0;
+        }
+
+        .code-macro {
+            color: #c586c0;
+        }
+
+        .tab {
+            padding-left: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #68217A;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .powered-by {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+            color: #666;
+        }
+
+        .net-architecture {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            display: block;
+            text-align: center;
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+        }
+
+        .about {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-box">
+        <h1>C#</h1>
+        <img class="cs-logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C# Logo">
+
+        <p class="description">
+            C# (pronounced "C Sharp") is Microsoft's modern, object-oriented programming language.
+            As a cornerstone of the .NET ecosystem, it combines the power of C++ with the simplicity of Visual Basic.
+            C# is versatile enough for Windows apps, web services, games (via Unity), and cross-platform development
+            with .NET Core.
+        </p>
+
+        <div class="section">
+            <h2 class="features-title">Key Features</h2>
+            <ul class="features-list">
+                <li class="feature-item"><strong>Object-Oriented:</strong> Full support for encapsulation, inheritance,
+                    and polymorphism</li>
+                <li class="feature-item"><strong>Type-Safe:</strong> Strong typing with compile-time checking</li>
+                <li class="feature-item"><strong>Modern Syntax:</strong> Features like LINQ, async/await, and pattern
+                    matching</li>
+                <li class="feature-item"><strong>Memory Management:</strong> Automatic garbage collection</li>
+                <li class="feature-item"><strong>Cross-Platform:</strong> Runs on Windows, Linux, and macOS via .NET
+                    Core</li>
+                <li class="feature-item"><strong>Rich Standard Library:</strong> Comprehensive .NET Base Class Library
+                </li>
+                <li class="feature-item"><strong>Language Interoperability:</strong> Works seamlessly with other .NET
+                    languages</li>
+                <li class="feature-item"><strong>Versatile:</strong> Used for web, mobile, desktop, games, and cloud
+                    development</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>.NET Platform Architecture</h2>
+            <img src="https://dotnet.microsoft.com/static/images/redesign/dotnet-architecture.svg"
+                alt=".NET Architecture" class="net-architecture">
+            <p>The .NET platform provides a comprehensive environment for C# development:</p>
+            <ul class="features-list">
+                <li class="feature-item"><strong>Common Language Runtime (CLR):</strong> Execution engine with JIT
+                    compilation</li>
+                <li class="feature-item"><strong>Base Class Library (BCL):</strong> Fundamental classes for common tasks
+                </li>
+                <li class="feature-item"><strong>ASP.NET Core:</strong> Framework for building web applications</li>
+                <li class="feature-item"><strong>Entity Framework:</strong> ORM for database access</li>
+                <li class="feature-item"><strong>Xamarin:</strong> For cross-platform mobile development</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Where C# is Used</h2>
+            <ul class="usage-list">
+                <li class="usage-item"><strong>Enterprise Software:</strong> Business applications, CRM, ERP systems
+                </li>
+                <li class="usage-item"><strong>Game Development:</strong> Unity game engine's primary scripting language
+                </li>
+                <li class="usage-item"><strong>Web Development:</strong> ASP.NET Core for backend services</li>
+                <li class="usage-item"><strong>Desktop Applications:</strong> Windows Forms, WPF, UWP</li>
+                <li class="usage-item"><strong>Mobile Apps:</strong> Xamarin for cross-platform development</li>
+                <li class="usage-item"><strong>Cloud Services:</strong> Azure functions and cloud-native apps</li>
+                <li class="usage-item"><strong>IoT Applications:</strong> Device programming with .NET IoT</li>
+                <li class="usage-item"><strong>AI/ML:</strong> ML.NET for machine learning applications</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Popular C# Frameworks & Libraries</h2>
+            <ul class="frameworks-list">
+                <li class="framework-item"><strong>Web Frameworks:</strong> ASP.NET Core, Blazor</li>
+                <li class="framework-item"><strong>Desktop UI:</strong> Windows Forms, WPF, Avalonia</li>
+                <li class="framework-item"><strong>Mobile:</strong> Xamarin, MAUI (.NET Multi-platform App UI)</li>
+                <li class="framework-item"><strong>ORM:</strong> Entity Framework Core, Dapper</li>
+                <li class="framework-item"><strong>Testing:</strong> xUnit, NUnit, Moq</li>
+                <li class="framework-item"><strong>Game Development:</strong> Unity, MonoGame</li>
+                <li class="framework-item"><strong>Microservices:</strong> gRPC, Orleans</li>
+                <li class="framework-item"><strong>Serialization:</strong> Newtonsoft.Json, System.Text.Json</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>C# Code Examples</h2>
+
+            <h3>Hello World</h3>
+            <div class="code-example">
+                <span class="code-keyword">using</span> System;
+                <br>
+                <br><span class="code-keyword">class</span> <span class="code-class">Program</span>
+                <br>{
+                <br><span class="tab"></span><span class="code-keyword">static void</span> <span
+                    class="code-function">Main</span>(<span class="code-keyword">string</span>[] args)
+                <br><span class="tab"></span>{
+                <br><span class="tab"></span><span class="tab"></span>Console.<span
+                    class="code-function">WriteLine</span>(<span class="code-string">"Hello, World!"</span>);
+                <br><span class="tab"></span>}
+                <br>}
+            </div>
+
+            <h3>Object-Oriented Programming</h3>
+            <div class="code-example">
+                <span class="code-keyword">public class</span> <span class="code-class">Vehicle</span>
+                <br>{
+                <br><span class="tab"></span><span class="code-keyword">public string</span> Make { <span
+                    class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
+                <br><span class="tab"></span><span class="code-keyword">public string</span> Model { <span
+                    class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
+                <br>
+                <br><span class="tab"></span><span class="code-keyword">public virtual void</span> <span
+                    class="code-function">DisplayInfo</span>()
+                <br><span class="tab"></span>{
+                <br><span class="tab"></span><span class="tab"></span>Console.<span
+                    class="code-function">WriteLine</span>($<span class="code-string">"Make: {Make}, Model:
+                    {Model}"</span>);
+                <br><span class="tab"></span>}
+                <br>}
+                <br>
+                <br><span class="code-keyword">public class</span> <span class="code-class">Car</span> : <span
+                    class="code-class">Vehicle</span>
+                <br>{
+                <br><span class="tab"></span><span class="code-keyword">public int</span> Doors { <span
+                    class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
+                <br>
+                <br><span class="tab"></span><span class="code-keyword">public override void</span> <span
+                    class="code-function">DisplayInfo</span>()
+                <br><span class="tab"></span>{
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">base</span>.<span
+                    class="code-function">DisplayInfo</span>();
+                <br><span class="tab"></span><span class="tab"></span>Console.<span
+                    class="code-function">WriteLine</span>($<span class="code-string">"Doors: {Doors}"</span>);
+                <br><span class="tab"></span>}
+                <br>}
+            </div>
+
+            <h3>LINQ (Language Integrated Query)</h3>
+            <div class="code-example">
+                <span class="code-keyword">using</span> System;
+                <br><span class="code-keyword">using</span> System.Linq;
+                <br>
+                <br><span class="code-keyword">class</span> <span class="code-class">Program</span>
+                <br>{
+                <br><span class="tab"></span><span class="code-keyword">static void</span> <span
+                    class="code-function">Main</span>()
+                <br><span class="tab"></span>{
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">int</span>[] numbers =
+                { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+                <br>
+                <br><span class="tab"></span><span class="tab"></span><span class="code-comment">// LINQ query to find
+                    even numbers</span>
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">var</span> evenNumbers
+                = <span class="code-keyword">from</span> num <span class="code-keyword">in</span> numbers
+                <br><span class="tab"></span><span class="tab"></span><span class="tab"></span><span
+                    class="code-keyword">where</span> num % 2 == 0
+                <br><span class="tab"></span><span class="tab"></span><span class="tab"></span><span
+                    class="code-keyword">select</span> num;
+                <br>
+                <br><span class="tab"></span><span class="tab"></span>Console.<span
+                    class="code-function">WriteLine</span>(<span class="code-string">"Even numbers:"</span>);
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">foreach</span> (<span
+                    class="code-keyword">var</span> num <span class="code-keyword">in</span> evenNumbers)
+                <br><span class="tab"></span><span class="tab"></span>{
+                <br><span class="tab"></span><span class="tab"></span><span class="tab"></span>Console.<span
+                    class="code-function">WriteLine</span>(num);
+                <br><span class="tab"></span><span class="tab"></span>}
+                <br><span class="tab"></span>}
+                <br>}
+            </div>
+
+            <h3>ASP.NET Core Web API</h3>
+            <div class="code-example">
+                <span class="code-keyword">using</span> Microsoft.AspNetCore.Mvc;
+                <br>
+                <br><span class="code-keyword">namespace</span> MyApi.Controllers
+                <br>{
+                <br><span class="tab"></span>[<span class="code-function">ApiController</span>]
+                <br><span class="tab"></span>[<span class="code-function">Route</span>(<span
+                    class="code-string">"[controller]"</span>)]
+                <br><span class="tab"></span><span class="code-keyword">public class</span> <span
+                    class="code-class">WeatherForecastController</span> : <span class="code-class">ControllerBase</span>
+                <br><span class="tab"></span>{
+                <br><span class="tab"></span><span class="tab"></span>[<span class="code-function">HttpGet</span>]
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">public</span>
+                IActionResult <span class="code-function">Get</span>()
+                <br><span class="tab"></span><span class="tab"></span>{
+                <br><span class="tab"></span><span class="tab"></span><span class="tab"></span><span
+                    class="code-keyword">return</span> <span class="code-function">Ok</span>(<span
+                    class="code-keyword">new</span> { Message = <span class="code-string">"Hello from Web API!"</span>
+                });
+                <br><span class="tab"></span><span class="tab"></span>}
+                <br><span class="tab"></span>}
+                <br>}
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>C# vs Other Languages</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>C#</th>
+                    <th>Java</th>
+                    <th>Python</th>
+                </tr>
+                <tr>
+                    <td>Platform</td>
+                    <td>.NET (cross-platform)</td>
+                    <td>JVM</td>
+                    <td>Interpreted</td>
+                </tr>
+                <tr>
+                    <td>Performance</td>
+                    <td>High (JIT compiled)</td>
+                    <td>High (JIT compiled)</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <td>Typing</td>
+                    <td>Static with type inference</td>
+                    <td>Static</td>
+                    <td>Dynamic</td>
+                </tr>
+                <tr>
+                    <td>Primary Use</td>
+                    <td>Enterprise, Web, Games</td>
+                    <td>Enterprise, Android</td>
+                    <td>Web, Scripting, AI</td>
+                </tr>
+                <tr>
+                    <td>Memory Management</td>
+                    <td>Garbage Collection</td>
+                    <td>Garbage Collection</td>
+                    <td>Garbage Collection</td>
+                </tr>
+                <tr>
+                    <td>Learning Curve</td>
+                    <td>Moderate</td>
+                    <td>Steep</td>
+                    <td>Easy</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Famous Applications Built with C#</h2>
+            <ul class="applications-list">
+                <li class="application-item"><strong>Microsoft Products:</strong> Visual Studio, Office 365, Azure
+                    Portal</li>
+                <li class="application-item"><strong>Games:</strong> Unity-based games (Pokémon Go, Monument Valley)
+                </li>
+                <li class="application-item"><strong>Enterprise Software:</strong> Many ERP and CRM systems</li>
+                <li class="application-item"><strong>Web Services:</strong> Stack Overflow, Microsoft Docs</li>
+                <li class="application-item"><strong>Financial Systems:</strong> Trading platforms, banking software
+                </li>
+                <li class="application-item"><strong>Healthcare:</strong> Medical record systems</li>
+                <li class="application-item"><strong>E-commerce:</strong> Numerous online retail platforms</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>C# Version History</h2>
+            <ul class="versions-list">
+                <li class="version-item"><strong>2002:</strong> C# 1.0 with .NET Framework 1.0</li>
+                <li class="version-item"><strong>2005:</strong> C# 2.0 (generics, nullable types)</li>
+                <li class="version-item"><strong>2007:</strong> C# 3.0 (LINQ, lambda expressions)</li>
+                <li class="version-item"><strong>2010:</strong> C# 4.0 (dynamic typing, named arguments)</li>
+                <li class="version-item"><strong>2012:</strong> C# 5.0 (async/await)</li>
+                <li class="version-item"><strong>2015:</strong> C# 6.0 (null-conditional operator, string interpolation)
+                </li>
+                <li class="version-item"><strong>2017:</strong> C# 7.0 (tuples, pattern matching)</li>
+                <li class="version-item"><strong>2019:</strong> C# 8.0 (nullable reference types, ranges)</li>
+                <li class="version-item"><strong>2020:</strong> C# 9.0 (records, init-only properties)</li>
+                <li class="version-item"><strong>2021:</strong> C# 10.0 (file-scoped namespaces, global using)</li>
+                <li class="version-item"><strong>2022:</strong> C# 11.0 (raw string literals, required members)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Why Learn C#?</h2>
+            <ul class="features-list">
+                <li class="feature-item"><strong>Enterprise Demand:</strong> Widely used in business applications</li>
+                <li class="feature-item"><strong>Game Development:</strong> Primary language for Unity</li>
+                <li class="feature-item"><strong>Career Opportunities:</strong> High demand for .NET developers</li>
+                <li class="feature-item"><strong>Modern Features:</strong> Continuously evolving with new capabilities
+                </li>
+                <li class="feature-item"><strong>Cross-Platform:</strong> Build for Windows, Linux, macOS, and mobile
+                </li>
+                <li class="feature-item"><strong>Strong Ecosystem:</strong> Excellent tooling with Visual Studio</li>
+                <li class="feature-item"><strong>Cloud Integration:</strong> Ideal for Azure development</li>
+            </ul>
+        </div>
+
+        <p class="powered-by">The language of choice for .NET developers worldwide</p>
+
+        <div class="footer">
+            <p><strong>For more Details</strong></p>
+            <a href="about.html" class="about">contact us</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

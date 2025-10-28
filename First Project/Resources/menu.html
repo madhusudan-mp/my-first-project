@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages Guide</title>
+    <link rel="shortcut icon" href="Images\png.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Tahoma, sans-serif;
+        }
+
+        body {
+            background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Optional: makes it fixed while scrolling */
+            /* Fallback color if image doesn't load */
+            background-color: #f0f6f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 3rem;
+            color: #0080ff;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cards-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            position: center;
+            gap: 30px;
+            margin-top: 50px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .language-card {
+            background-blend-mode: screen;
+            backdrop-filter: blur(4px);
+            background-color: transparent;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .language-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            background: radial-gradient(circle at top right,rgba(138, 135, 135, 0.1)10%, rgba(151, 163, 230, 0.1)50%);
+        }
+
+        .language-img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin: 0 auto 20px;
+        }
+
+        .language-name {
+            font-size: 1.5rem;
+            color: aqua;
+            margin-bottom: 10px;
+        }
+
+        .language-desc {
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .heading {
+                font-size: 2rem;
+            }
+
+            .cards-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .language-card {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .language-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .language-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .language-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .language-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .language-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .language-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Programming Languages</h1>
+
+        <div class="cards-wrapper">
+            <div class="language-card" onclick="window.location.href='python.html'">
+                <img class="language-img" src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
+                <h2 class="language-name">Python</h2>
+                <p class="language-desc">Simple yet powerful language for web development, data science, AI, and more.
+                </p>
+            </div>
+
+            <div class="language-card" onclick="window.location.href='javascript.html'">
+                <img class="language-img" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+                    alt="JavaScript">
+                <h2 class="language-name">JavaScript</h2>
+                <p class="language-desc">The language of the web, essential for interactive websites and apps.</p>
+            </div>
+
+            <div class="language-card" onclick="window.location.href='java.html'">
+                <img class="language-img" src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java">
+                <h2 class="language-name">Java</h2>
+                <p class="language-desc">Robust, platform-independent language for enterprise and Android apps.</p>
+            </div>
+
+            <div class="language-card" onclick="window.location.href='cpp.html'">
+                <img class="language-img" src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++">
+                <h2 class="language-name">C++</h2>
+                <p class="language-desc">High-performance language for system/software development and games.</p>
+            </div>
+
+            <div class="language-card" onclick="window.location.href='csharp.html'">
+                <img class="language-img" src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" alt="C#">
+                <h2 class="language-name">C#</h2>
+                <p class="language-desc">Versatile Microsoft language for web, desktop, and game development.</p>
+            </div>
+
+            <div class="language-card" onclick="window.location.href='html.html'">
+                <img class="language-img" src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="HTML">
+                <h2 class="language-name">HTML</h2>
+                <p class="language-desc">The foundation of all web pages, defining structure and content.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click event listeners to all cards
+        document.querySelectorAll('.language-card').forEach(card => {
+            card.addEventListener('click', function () {
+                // You can add additional behavior here if needed
+                window.location.href = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+            });
+        });
+    </script>
+</body>
+
+</html>

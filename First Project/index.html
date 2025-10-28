@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages Guide</title>
+    <link rel="shortcut icon" href="Images\logo.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('download.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: #73ff00;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
+            background-color: transparent;
+            backdrop-filter: blur(20px);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            max-height: auto;
+            border-radius: 0px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #00fff2;
+            margin-bottom: 30px;
+        }
+
+        .project-info {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+
+        .credits {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            font-size: 1rem;
+        }
+
+        .marquee {
+            margin-top: 40px;
+            font-size: 20px;
+            color: rgb(255, 0, 0);
+            text-align: center;
+        }
+
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 40px auto 0;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #00b7ff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer {
+            display: block;
+            text-align: center;
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+        }
+
+        .about {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .btn:hover {
+            background-color: #fa2525;
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .credits {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <img class="logo" src="Images\png.png" alt="Logo">
+            <h1>Programming Languages Guide</h1>
+            <h2>BCA Project Presentation</h2>
+        </header>
+
+        <div class="project-info">
+            <p>An interactive guide to popular programming languages</p>
+            <p>Learn their features, uses, and syntax basics</p>
+        </div>
+
+        <div class="credits">
+            <div>
+                <p><strong></strong><br></p>
+            </div>
+            <div>
+                <p><strong>Project by:</strong><br>Madgusudan M P</p>
+            </div>
+        </div>
+
+        <div class="marquee">
+            <marquee behavior="scroll" direction="left"> M A D H U </marquee>
+        </div>
+
+        <a href="Resources\menu.html" class="btn">Explore Languages</a>
+
+        <div class="footer">
+            <p><strong>For more Details</strong></p>
+            <a href="Resources\about.html" class="about">contact us</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

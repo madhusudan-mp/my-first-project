@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+        type="image/x-icon">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000000;
+            padding: 20px;
+        }
+
+        .content-box {
+            background-color: rgba(242, 242, 242, 0.8);
+            backdrop-filter: blur(3px);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            color: #00599C;
+            margin-top: 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #004482;
+            border-bottom: 2px solid #00599C;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        .cpp-logo {
+            width: 200px;
+            display: block;
+            margin: 20px auto;
+            transition: transform 0.3s ease;
+        }
+
+        .cpp-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 25px 0;
+        }
+
+        .features-title {
+            font-size: 1.8em;
+            color: #004482;
+            text-align: center;
+            margin: 30px 0 20px;
+            border-bottom: 2px solid #004482;
+            padding-bottom: 10px;
+        }
+
+        .features-list,
+        .frameworks-list,
+        .usage-list,
+        .applications-list,
+        .standards-list {
+            font-size: 1.1em;
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        .feature-item,
+        .framework-item,
+        .usage-item,
+        .application-item,
+        .standard-item {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .feature-item:before {
+            content: "⚙️";
+            position: absolute;
+            left: 0;
+        }
+
+        .framework-item:before {
+            content: "🛠️";
+            position: absolute;
+            left: 0;
+        }
+
+        .usage-item:before {
+            content: "🚀";
+            position: absolute;
+            left: 0;
+        }
+
+        .application-item:before {
+            content: "💻";
+            position: absolute;
+            left: 0;
+        }
+
+        .standard-item:before {
+            content: "📜";
+            position: absolute;
+            left: 0;
+        }
+
+        .code-example {
+            background-color: #2b2b2b;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        .code-comment {
+            color: #6a9955;
+        }
+
+        .code-keyword {
+            color: #569cd6;
+        }
+
+        .code-string {
+            color: #ce9178;
+        }
+
+        .code-function {
+            color: #dcdcaa;
+        }
+
+        .code-number {
+            color: #b5cea8;
+        }
+
+        .code-class {
+            color: #4ec9b0;
+        }
+
+        .code-macro {
+            color: #c586c0;
+        }
+
+        .tab {
+            padding-left: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #00599C;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .powered-by {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+            color: #666;
+        }
+
+        .memory-diagram {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            display: block;
+            text-align: center;
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+        }
+
+        .about {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-box">
+        <h1>C++</h1>
+        <img class="cpp-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+            alt="C++ Logo">
+
+        <p class="description">
+            C++ is a powerful extension of the C language that adds object-oriented capabilities while maintaining
+            high performance and low-level control. As one of the fastest programming languages available,
+            it's the backbone of system software, game engines, and performance-critical applications.
+        </p>
+
+        <div class="section">
+            <h2 class="features-title">Key Features</h2>
+            <ul class="features-list">
+                <li class="feature-item"><strong>High Performance:</strong> Compiled language with direct memory access
+                    and minimal runtime overhead</li>
+                <li class="feature-item"><strong>Multi-Paradigm:</strong> Supports procedural, object-oriented, generic,
+                    and functional programming</li>
+                <li class="feature-item"><strong>Memory Control:</strong> Manual memory management with pointers and
+                    references</li>
+                <li class="feature-item"><strong>Standard Template Library (STL):</strong> Powerful collection of
+                    template classes and functions</li>
+                <li class="feature-item"><strong>Portability:</strong> Can run on various platforms with minimal changes
+                </li>
+                <li class="feature-item"><strong>Operator Overloading:</strong> Ability to redefine operators for
+                    user-defined types</li>
+                <li class="feature-item"><strong>Exception Handling:</strong> Robust error handling mechanisms</li>
+                <li class="feature-item"><strong>Multiple Inheritance:</strong> Support for inheriting from multiple
+                    base classes</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Where C++ is Used</h2>
+            <ul class="usage-list">
+                <li class="usage-item"><strong>Game Development:</strong> Unreal Engine, game physics, graphics
+                    programming</li>
+                <li class="usage-item"><strong>System Software:</strong> Operating systems, device drivers, embedded
+                    systems</li>
+                <li class="usage-item"><strong>High-Frequency Trading:</strong> Low-latency financial applications</li>
+                <li class="usage-item"><strong>Graphics Applications:</strong> Adobe Photoshop, Maya, AutoCAD</li>
+                <li class="usage-item"><strong>Web Browsers:</strong> Chrome, Firefox rendering engines</li>
+                <li class="usage-item"><strong>Database Systems:</strong> MySQL, MongoDB core components</li>
+                <li class="usage-item"><strong>Scientific Computing:</strong> High-performance numerical computations
+                </li>
+                <li class="usage-item"><strong>AI/Machine Learning:</strong> TensorFlow, PyTorch core components</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Memory Management in C++</h2>
+            <p>C++ gives programmers fine-grained control over memory:</p>
+            <ul class="features-list">
+                <li class="feature-item"><strong>Stack:</strong> Automatic storage for local variables</li>
+                <li class="feature-item"><strong>Heap:</strong> Dynamic memory allocation with new/delete</li>
+                <li class="feature-item"><strong>Smart Pointers:</strong> unique_ptr, shared_ptr for automatic memory
+                    management</li>
+                <li class="feature-item"><strong>RAII:</strong> Resource Acquisition Is Initialization pattern</li>
+                <li class="feature-item"><strong>Move Semantics:</strong> Efficient transfer of resources</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Popular C++ Libraries & Frameworks</h2>
+            <ul class="frameworks-list">
+                <li class="framework-item"><strong>Game Development:</strong> Unreal Engine, Godot, Cocos2d-x</li>
+                <li class="framework-item"><strong>GUI Development:</strong> Qt, wxWidgets, GTKmm</li>
+                <li class="framework-item"><strong>Networking:</strong> Boost.Asio, POCO</li>
+                <li class="framework-item"><strong>Machine Learning:</strong> TensorFlow C++ API, Dlib</li>
+                <li class="framework-item"><strong>Graphics:</strong> OpenGL, Vulkan, DirectX wrappers</li>
+                <li class="framework-item"><strong>Testing:</strong> Google Test, Catch2</li>
+                <li class="framework-item"><strong>Math/Physics:</strong> Eigen, Armadillo, Bullet Physics</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>C++ Code Examples</h2>
+
+            <h3>Hello World</h3>
+            <div class="code-example">
+                <span class="code-keyword">#include</span> <span class="code-string">&lt;iostream&gt;</span>
+                <br>
+                <br><span class="code-keyword">int</span> <span class="code-function">main</span>() {
+                <br><span class="tab"></span><span class="code-keyword">std</span>::cout << <span class="code-string">
+                    "Hello, World!"</span>
+                    << <span class="code-keyword">std</span>::endl;
+                        <br><span class="tab"></span><span class="code-keyword">return</span> <span
+                            class="code-number">0</span>;
+                        <br>}
+            </div>
+
+            <h3>Object-Oriented Programming</h3>
+            <div class="code-example">
+                <span class="code-keyword">#include</span> <span class="code-string">&lt;string&gt;</span>
+                <br><span class="code-keyword">#include</span> <span class="code-string">&lt;iostream&gt;</span>
+                <br>
+                <br><span class="code-keyword">class</span> <span class="code-class">Vehicle</span> {
+                <br><span class="tab"></span><span class="code-keyword">private</span>:
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">std</span>::string
+                brand;
+                <br>
+                <br><span class="tab"></span><span class="code-keyword">public</span>:
+                <br><span class="tab"></span><span class="code-function">Vehicle</span>(<span
+                    class="code-keyword">const</span> <span class="code-keyword">std</span>::string& b) : <span
+                    class="code-function">brand</span>(b) {}
+                <br>
+                <br><span class="tab"></span><span class="code-keyword">virtual void</span> <span
+                    class="code-function">display</span>() <span class="code-keyword">const</span> {
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">std</span>::cout <<
+                    <span class="code-string">"Brand: "</span>
+                    << brand << <span class="code-keyword">std</span>::endl;
+                        <br><span class="tab"></span>}
+                        <br>};
+                        <br>
+                        <br><span class="code-keyword">class</span> <span class="code-class">Car</span> : <span
+                            class="code-keyword">public</span> Vehicle {
+                        <br><span class="tab"></span><span class="code-keyword">int</span> doors;
+                        <br>
+                        <br><span class="tab"></span><span class="code-keyword">public</span>:
+                        <br><span class="tab"></span><span class="code-function">Car</span>(<span
+                            class="code-keyword">const</span> <span class="code-keyword">std</span>::string& b, <span
+                            class="code-keyword">int</span> d) : <span class="code-function">Vehicle</span>(b), <span
+                            class="code-function">doors</span>(d) {}
+                        <br>
+                        <br><span class="tab"></span><span class="code-keyword">void</span> <span
+                            class="code-function">display</span>() <span class="code-keyword">const override</span> {
+                        <br><span class="tab"></span><span class="tab"></span>Vehicle::<span
+                            class="code-function">display</span>();
+                        <br><span class="tab"></span><span class="tab"></span><span
+                            class="code-keyword">std</span>::cout << <span class="code-string">"Doors: "</span>
+                            << doors << <span class="code-keyword">std</span>::endl;
+                                <br><span class="tab"></span>}
+                                <br>};
+                                <br>
+                                <br><span class="code-keyword">int</span> <span class="code-function">main</span>() {
+                                <br><span class="tab"></span>Car <span class="code-function">myCar</span>(<span
+                                    class="code-string">"Toyota"</span>, <span class="code-number">4</span>);
+                                <br><span class="tab"></span>myCar.<span class="code-function">display</span>();
+                                <br><span class="tab"></span><span class="code-keyword">return</span> <span
+                                    class="code-number">0</span>;
+                                <br>}
+            </div>
+
+            <h3>STL (Standard Template Library) Example</h3>
+            <div class="code-example">
+                <span class="code-keyword">#include</span> <span class="code-string">&lt;iostream&gt;</span>
+                <br><span class="code-keyword">#include</span> <span class="code-string">&lt;vector&gt;</span>
+                <br><span class="code-keyword">#include</span> <span class="code-string">&lt;algorithm&gt;</span>
+                <br>
+                <br><span class="code-keyword">int</span> <span class="code-function">main</span>() {
+                <br><span class="tab"></span><span class="code-keyword">std</span>::vector&lt;<span
+                    class="code-keyword">int</span>&gt; numbers = {<span class="code-number">5</span>, <span
+                    class="code-number">2</span>, <span class="code-number">8</span>, <span
+                    class="code-number">1</span>, <span class="code-number">9</span>};
+                <br>
+                <br><span class="tab"></span><span class="code-comment">// Sort the vector</span>
+                <br><span class="tab"></span><span class="code-keyword">std</span>::<span
+                    class="code-function">sort</span>(numbers.<span class="code-function">begin</span>(), numbers.<span
+                    class="code-function">end</span>());
+                <br>
+                <br><span class="tab"></span><span class="code-comment">// Lambda function to print elements</span>
+                <br><span class="tab"></span><span class="code-keyword">auto</span> print = [](<span
+                    class="code-keyword">const</span> <span class="code-keyword">int</span>& n) {
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">std</span>::cout << n
+                    << <span class="code-string">" "</span>;
+                    <br><span class="tab"></span>};
+                    <br>
+                    <br><span class="tab"></span><span class="code-comment">// Print sorted numbers</span>
+                    <br><span class="tab"></span><span class="code-keyword">std</span>::<span
+                        class="code-function">for_each</span>(numbers.<span class="code-function">begin</span>(),
+                    numbers.<span class="code-function">end</span>(), print);
+                    <br><span class="tab"></span><span class="code-keyword">return</span> <span
+                        class="code-number">0</span>;
+                    <br>}
+            </div>
+
+            <h3>Modern C++ Features (C++20)</h3>
+            <div class="code-example">
+                <span class="code-keyword">#include</span> <span class="code-string">&lt;iostream&gt;</span>
+                <br><span class="code-keyword">#include</span> <span class="code-string">&lt;ranges&gt;</span>
+                <br><span class="code-keyword">#include</span> <span class="code-string">&lt;vector&gt;</span>
+                <br>
+                <br><span class="code-keyword">int</span> <span class="code-function">main</span>() {
+                <br><span class="tab"></span><span class="code-keyword">std</span>::vector&lt;<span
+                    class="code-keyword">int</span>&gt; numbers = {<span class="code-number">1</span>, <span
+                    class="code-number">2</span>, <span class="code-number">3</span>, <span
+                    class="code-number">4</span>, <span class="code-number">5</span>, <span
+                    class="code-number">6</span>, <span class="code-number">7</span>, <span
+                    class="code-number">8</span>, <span class="code-number">9</span>};
+                <br>
+                <br><span class="tab"></span><span class="code-comment">// C++20 Ranges and pipe operator</span>
+                <br><span class="tab"></span><span class="code-keyword">auto</span> even_squares = numbers
+                <br><span class="tab"></span><span class="tab"></span>| <span
+                    class="code-keyword">std</span>::views::<span class="code-function">filter</span>([](<span
+                    class="code-keyword">int</span> n) { <span class="code-keyword">return</span> n % <span
+                    class="code-number">2</span> == <span class="code-number">0</span>; })
+                <br><span class="tab"></span><span class="tab"></span>| <span
+                    class="code-keyword">std</span>::views::<span class="code-function">transform</span>([](<span
+                    class="code-keyword">int</span> n) { <span class="code-keyword">return</span> n * n; });
+                <br>
+                <br><span class="tab"></span><span class="code-keyword">for</span> (<span
+                    class="code-keyword">auto</span> n : even_squares) {
+                <br><span class="tab"></span><span class="tab"></span><span class="code-keyword">std</span>::cout << n
+                    << <span class="code-string">" "</span>;
+                    <br><span class="tab"></span>}
+                    <br><span class="tab"></span><span class="code-keyword">return</span> <span
+                        class="code-number">0</span>;
+                    <br>}
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>C++ vs Other Languages</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>C++</th>
+                    <th>Java</th>
+                    <th>Python</th>
+                </tr>
+                <tr>
+                    <td>Performance</td>
+                    <td>Extremely High</td>
+                    <td>High</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <td>Memory Management</td>
+                    <td>Manual/Smart Pointers</td>
+                    <td>Garbage Collection</td>
+                    <td>Garbage Collection</td>
+                </tr>
+                <tr>
+                    <td>Compilation</td>
+                    <td>Compiled to native code</td>
+                    <td>Compiled to bytecode</td>
+                    <td>Interpreted</td>
+                </tr>
+                <tr>
+                    <td>Learning Curve</td>
+                    <td>Very Steep</td>
+                    <td>Steep</td>
+                    <td>Easy</td>
+                </tr>
+                <tr>
+                    <td>Use Cases</td>
+                    <td>Systems, Games, HPC</td>
+                    <td>Enterprise, Android</td>
+                    <td>Web, Scripting, AI</td>
+                </tr>
+                <tr>
+                    <td>Safety</td>
+                    <td>Minimal (programmer responsibility)</td>
+                    <td>High (runtime checks)</td>
+                    <td>High (automatic management)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Famous Applications Built with C++</h2>
+            <ul class="applications-list">
+                <li class="application-item"><strong>Operating Systems:</strong> Windows, Linux kernel components, macOS
+                    parts</li>
+                <li class="application-item"><strong>Game Engines:</strong> Unreal Engine, Unity (core), CryEngine</li>
+                <li class="application-item"><strong>Browsers:</strong> Chrome, Firefox, Safari rendering engines</li>
+                <li class="application-item"><strong>Database Systems:</strong> MySQL, MongoDB, PostgreSQL core
+                    components</li>
+                <li class="application-item"><strong>Graphics Software:</strong> Adobe Photoshop, Illustrator, Premiere
+                </li>
+                <li class="application-item"><strong>3D Modeling:</strong> Autodesk Maya, 3ds Max, Blender</li>
+                <li class="application-item"><strong>Financial Systems:</strong> High-frequency trading platforms</li>
+                <li class="application-item"><strong>Telecom:</strong> Major networking infrastructure</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>C++ Standards Evolution</h2>
+            <ul class="standards-list">
+                <li class="standard-item"><strong>1985:</strong> C++ first released (originally "C with Classes")</li>
+                <li class="standard-item"><strong>1998:</strong> First ISO standard (C++98)</li>
+                <li class="standard-item"><strong>2003:</strong> C++03 minor update</li>
+                <li class="standard-item"><strong>2011:</strong> C++11 "Modern C++" (auto, lambdas, move semantics)</li>
+                <li class="standard-item"><strong>2014:</strong> C++14 (generic lambdas, digit separators)</li>
+                <li class="standard-item"><strong>2017:</strong> C++17 (structured bindings, std::filesystem)</li>
+                <li class="standard-item"><strong>2020:</strong> C++20 (concepts, ranges, coroutines)</li>
+                <li class="standard-item"><strong>2023:</strong> C++23 (expected, stacktrace, mdspan)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Why Learn C++ Today?</h2>
+            <ul class="features-list">
+                <li class="feature-item"><strong>Performance Critical Jobs:</strong> Essential for game development,
+                    HFT, systems programming</li>
+                <li class="feature-item"><strong>Foundation Knowledge:</strong> Understanding memory, hardware, and
+                    low-level concepts</li>
+                <li class="feature-item"><strong>Career Opportunities:</strong> High demand for skilled C++ developers
+                </li>
+                <li class="feature-item"><strong>Cross-Platform Development:</strong> Write code that runs anywhere</li>
+                <li class="feature-item"><strong>Modern Features:</strong> Recent standards have made C++ more
+                    expressive and safer</li>
+                <li class="feature-item"><strong>Interoperability:</strong> Can interface with C and other languages
+                </li>
+            </ul>
+        </div>
+
+        <p class="powered-by">Powering the world's most demanding applications since 1985</p>
+
+        <div class="footer">
+            <p><strong>For more Details</strong></p>
+            <a href="about.html" class="about">contact us</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
