@@ -2,4 +2,10 @@
 
 Simple Programming Languages Guide for beginers 
 
-![sample](https://github.com/user-attachments/assets/e3a2b525-70ad-4566-9f3a-358f34f77e48)
+
+![sample one](https://github.com/user-attachments/assets/4d8481c3-0bc8-47bc-a280-d4c84a5459ac)
+
+
+This is tha home page of my First Project
+
+Done.........
